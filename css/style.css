@@ -1,0 +1,206 @@
+.active{
+	font-weight: bolder;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: yellow;
+}
+
+.inactive{
+	font-weight: lighter;
+	color: white;
+}
+
+nav{
+	text-align: center;
+	background-color: darkblue;
+	color: yellow;
+	height: 50px;
+}
+
+.inactive:hover{
+	font-weight: bolder;
+	text-decoration: overline underline yellow; 
+}
+
+body{
+	background-color: white;
+}
+
+.image-grid{
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr;
+	grid-gap: 10px;
+}
+
+h1{
+	display: block;
+	color: black;
+	text-align: center;
+	font-size: xx-large;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	text-decoration: white solid underline;
+}
+
+.image-grid img{
+	image-orientation: 90deg;
+}
+
+nav li{
+	display: inline;
+	font-size: x-large;
+	justify-content: space-around;
+}
+
+.myinfo{
+	color: black;
+	padding: 15px;
+	padding-bottom: 30px;
+}
+
+.background-parallax{
+	position: fixed;
+	z-index: -1;
+	transform: rotate(270deg);
+	height: 100%;
+	width: auto;
+	margin: 0;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.background-parallax img{
+	width: fit-content;
+	animation-name: slidein;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+}
+
+.myinfo p{
+	padding: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+*{
+	font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+.myinfo{
+	padding-top: 20px;
+	text-align: center;
+}
+
+footer{
+	position: static;
+	background-color: darkblue;
+	color: yellow;
+	text-align: center;
+	justify-content: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.sportshead{
+	font-size: large;
+	color: black;
+	text-align: center;
+	padding-bottom: 35px;
+	padding-top: 10px;
+}
+
+.description{
+	padding: 10px 10px 10px 10px;
+}
+
+.flex-container{
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-items{
+	width: 100%;
+	padding: 5px;
+	text-align: center;
+}
+
+.container-fam{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	grid-gap: 5px;
+}
+
+#gray{
+	-webkit-filter: grayscale(100%);
+}
+
+#gray:hover{
+	filter: none;
+	-webkit-filter: grayscale(0%);
+}
+
+@media only screen and (min-width: 700px){
+	.active{
+		font-weight: bolder;
+	}
+
+	.image-grid{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-gap: 20px 20px;
+	}
+
+	.flex-container{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.flex-items{
+		width: 50%;
+		align-content: space-between;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 5px;
+	}
+}
+
+@media only screen and (min-width: 1200px){
+	.active{
+		font-weight: bolder;
+		background-color: yellow;
+
+	}
+
+	.image-grid{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	.flex-container{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.flex-items{
+		width: 33.333333333%;
+		
+	}
+}
+
+@media only screen and (prefers-reduced-motion: reduce){
+	.background-parallax{
+		background-attachment: scroll;
+	}
+
+	.background-parallax img{
+		transition: none;
+	}
+}
